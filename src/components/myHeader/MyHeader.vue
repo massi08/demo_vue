@@ -1,10 +1,10 @@
 <template>
-  <md-whiteframe elevation="2">
+  <md-whiteframe>
     <md-toolbar>
       <h2 class="md-title">VueDemo</h2>
       <div class="links">
-        <router-link to="/home" class="md-button" tag="button"> Home</router-link>
-        <router-link to="/about" class="md-button" tag="button"> About</router-link>
+        <router-link to="/home" class="md-button"> Home</router-link>
+        <router-link to="/about" class="md-button"> About</router-link>
       </div>
     </md-toolbar>
   </md-whiteframe>
