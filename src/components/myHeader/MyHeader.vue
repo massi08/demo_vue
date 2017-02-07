@@ -3,7 +3,7 @@
     <md-toolbar>
       <h2 class="md-title">VueDemo</h2>
       <div class="links">
-        <router-link to="/home" class="md-button"> Home</router-link>
+        <router-link to="/" class="md-button" exact> Home</router-link>
         <router-link to="/about" class="md-button"> About</router-link>
       </div>
     </md-toolbar>
