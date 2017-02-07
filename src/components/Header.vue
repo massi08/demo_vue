@@ -1,5 +1,5 @@
 <template>
-  <div class="header">
+  <div>
     <md-toolbar>
       <md-button class="md-icon-button">
         <md-icon>menu</md-icon>
@@ -18,7 +18,7 @@
     }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
   .md-title {
     flex: 1;
   }
