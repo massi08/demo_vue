@@ -1,9 +1,14 @@
 <template>
   <md-whiteframe elevation="2" class="test-model-wrapper">
     <div>
-      <h2>
-        Your name is: <span class="first-name">{{firstName}} </span> <span class="last-name">{{lastName}}</span>
-      </h2>
+      <md-layout>
+        <md-layout>
+          <h2>
+            Your name is: <span class="first-name">{{firstName}} </span> <span class="last-name">{{lastName}}</span>
+          </h2>
+        </md-layout>
+        <md-switch v-model="onSubmitOnly">Submit First</md-switch>
+      </md-layout>
 
       <md-input-container md-theme="purple">
         <label>First Name</label>
@@ -14,6 +19,12 @@
         <label>Last Name</label>
         <md-input placeholder="Enter your last name" v-model="lastName"></md-input>
       </md-input-container>
+
+      <div class="submit-button" v-if="onSubmitOnly">
+        <md-button class="md-primary md-raised">
+          Valider
+        </md-button>
+      </div>
     </div>
   </md-whiteframe>
 </template>
@@ -24,7 +35,8 @@
         data() {
             return {
                 firstName: "",
-                lastName: ""
+                lastName: "",
+                onSubmitOnly: false
             }
         }
     }
@@ -43,5 +55,9 @@
 
   .last-name {
     color: #2196f3;
+  }
+
+  .submit-button {
+    text-align: right;
   }
 </style>
