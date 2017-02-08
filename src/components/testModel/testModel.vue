@@ -4,7 +4,7 @@
       <md-layout>
         <md-layout>
           <h2>
-            Your name is: <span class="first-name">{{firstName}} </span> <span class="last-name">{{lastName}}</span>
+            Your name is: <span class="first-name">{{fullName}} </span>
           </h2>
         </md-layout>
         <md-switch v-model="onSubmitOnly">Submit First</md-switch>
@@ -36,13 +36,35 @@
             return {
                 firstName: "",
                 lastName: "",
+                fullName: "",
                 onSubmitOnly: false
             }
         },
         methods : {
           updateInfo: function () {
               console.log("test")
+              this.fullname = this.firstName + ' ' + this.lastName
           }
+        },
+        watch : {
+          fullName: function(value){
+                console.log(value + " watch called")
+                // A chaque fois que fullname est modifié
+            }
+        },
+        computed : {
+            /*fullName: {
+                get: function () {
+                  console.log("get called")
+                  return this.firstName
+                },
+                set: function (value) {
+                  console.log("set called " + value)
+                    let name = value.split(' ')
+                    this.firstName = name[0]
+                    this.lastName = name[value.length - 1]
+                }
+            }*/
         }
     }
 </script>
