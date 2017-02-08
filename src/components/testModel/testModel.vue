@@ -21,7 +21,7 @@
       </md-input-container>
 
       <div class="submit-button" v-if="onSubmitOnly">
-        <md-button class="md-primary md-raised">
+        <md-button class="md-primary md-raised" @click="updateInfo()">
           Valider
         </md-button>
       </div>
@@ -38,6 +38,11 @@
                 lastName: "",
                 onSubmitOnly: false
             }
+        },
+        methods : {
+          updateInfo: function () {
+              console.log("test")
+          }
         }
     }
 </script>
