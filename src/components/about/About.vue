@@ -1,6 +1,7 @@
 <template>
   <div>
     <my-header></my-header>
+    <h1>About</h1>
   </div>
 </template>
 
@@ -14,4 +15,7 @@
 </script>
 
 <style lang="scss">
+  h1 {
+    text-align: center;
+  }
 </style>

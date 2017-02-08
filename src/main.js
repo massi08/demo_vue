@@ -8,10 +8,15 @@ import router from './router'
 var VueMaterial = require('vue-material')
 Vue.use(VueMaterial)
 
-Vue.material.registerTheme('default', {
-    primary: 'blue',
-    accent: 'red',
-    warn: 'red',
+Vue.material.registerTheme({
+    default: {
+        primary: 'blue',
+        accent: 'pink',
+        warn: 'red',
+    },
+    purple: {
+        primary: 'purple',
+    }
 })
 
 /* eslint-disable no-new */
