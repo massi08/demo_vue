@@ -1,6 +1,8 @@
 <template>
   <div id="app">
-    <router-view></router-view>
+    <transition name="my-router" appear>
+      <router-view></router-view>
+    </transition>
   </div>
 </template>
 
@@ -10,8 +12,5 @@
     }
 </script>
 
-<style>
-  #app {
-    font-family: 'Roboto', Helvetica, Arial, sans-serif;
-  }
+<style src="./style/style.css">
 </style>

@@ -1,7 +1,9 @@
 <template>
   <div>
     <my-header></my-header>
-    <h1>About</h1>
+    <div class="main-content">
+      <h1>About</h1>
+    </div>
   </div>
 </template>
 

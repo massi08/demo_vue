@@ -1,9 +1,9 @@
 <template>
-  <div class="not-found">
+  <div class="not-found main-content">
     <h1 class="md-display-4">
-      <md-icon class="md-size-4x">sentiment_very_dissatisfied</md-icon>
+      <md-icon class="md-size-4x">mood_bad</md-icon>
       404 Not Found
-      <md-icon class="md-size-4x">sentiment_very_dissatisfied</md-icon>
+      <md-icon class="md-size-4x">mood_bad</md-icon>
     </h1>
     <router-link to="/" tag="div" class="link-wrap">
       <md-button class="md-raised md-primary">

@@ -1,8 +1,10 @@
 <template>
   <div>
     <my-header></my-header>
-    <h1>Home</h1>
-    <test-model></test-model>
+    <div class="main-content">
+      <h1>Home</h1>
+      <test-model></test-model>
+    </div>
   </div>
 </template>
 
