@@ -1,16 +1,16 @@
 <template>
-  <div class="not-found main-content">
-    <h1 class="md-display-4">
-      <md-icon class="md-size-4x">mood_bad</md-icon>
-      404 Not Found
-      <md-icon class="md-size-4x">mood_bad</md-icon>
-    </h1>
-    <router-link to="/" tag="div" class="link-wrap">
-      <md-button class="md-raised md-primary">
-        <md-icon>home</md-icon>
-        Retournez vers la page d'acceuil
-      </md-button>
-    </router-link>
+    <div class="not-found">
+      <h1 class="md-display-4">
+        <md-icon class="md-size-4x">mood_bad</md-icon>
+        404 Not Found
+        <md-icon class="md-size-4x">mood_bad</md-icon>
+      </h1>
+      <router-link to="/" tag="div" class="link-wrap">
+        <md-button class="md-raised md-primary">
+          <md-icon>home</md-icon>
+          Retournez vers la page d'acceuil
+        </md-button>
+      </router-link>
   </div>
 </template>
 
