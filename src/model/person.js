@@ -15,9 +15,9 @@ export default class Persons {
     }
 }
 
-// let persons_store = new Persons()
-//
-// persons_store.addPerson(0, "Massinissa", "Bouneffa", "Web Developper")
-// persons_store.addPerson(1, "Fanuel", "Abebe", "Chomeur")
-// persons_store.addPerson(2, "Mahmoud", "Ayssami", "Back-End")
+let persons_store = new Persons()
+
+persons_store.addPerson(0, "Massinissa", "Bouneffa", "Web Developper")
+persons_store.addPerson(1, "Fanuel", "Abebe", "Chomeur")
+persons_store.addPerson(2, "Mahmoud", "Ayssami", "Back-End")
 
