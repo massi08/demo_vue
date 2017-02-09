@@ -4,8 +4,8 @@
     <p>Liste des utilisateurs</p>
     <ul>
       <li v-for="pers in persons">
-        <router-link :to="{name:'Person', params: {id: pers.state.id}}">
-          {{pers.state.firstName}}
+        <router-link :to="{name:'Person', params: {id: pers.id}}">
+          {{pers.firstName}}
         </router-link>
       </li>
     </ul>
@@ -35,12 +35,11 @@
 <script>
 
     import MyHeader from "../myHeader/MyHeader.vue"
-    import Persons from "../../model/person.js"
     export default {
         name: 'profile',
         data: function () {
             return {
-                persons: Persons,
+                persons: persons_store.state,
                 person: {},
             }
         },
@@ -48,7 +47,7 @@
         methods: {
             add: function (person) {
                 console.log(this.persons)
-                Persons.addPerson(Persons.length, person.firstName, person.lastName, person.profession)
+                persons_store.addPerson(persons_store.state.length, person.firstName, person.lastName, person.profession)
             }
         }
     }
