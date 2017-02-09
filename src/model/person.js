@@ -13,6 +13,8 @@ export default class Persons {
         }
         this.state.push(person)
     }
+
+
 }
 
 let persons_store = new Persons()

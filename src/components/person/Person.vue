@@ -30,6 +30,7 @@
     import MyHeader from "../myHeader/MyHeader.vue"
     export default {
         name: 'persons',
+        components: {MyHeader},
         data: function () {
             return {
                 person: persons_store.state[this.$route.params.id]

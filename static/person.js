@@ -13,6 +13,14 @@ class Persons {
         }
         this.state.push(person)
     }
+
+    getPersonById(id){
+      for(var $i= 0; $i<this.state.length; $i++){
+        if(this.state[$i].id === id){
+          return this.state[$i]
+        }
+      }
+    }
 }
 
 let persons_store = new Persons()
