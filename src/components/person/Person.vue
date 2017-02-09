@@ -33,7 +33,7 @@
         components: {MyHeader},
         data: function () {
             return {
-                person: persons_store.state[this.$route.params.id]
+                person: persons_store.getPersonById(this.$route.params.id)
             }
         },
         components: {MyHeader}

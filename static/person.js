@@ -15,9 +15,9 @@ class Persons {
     }
 
     getPersonById(id){
-      for(var $i= 0; $i<this.state.length; $i++){
-        if(this.state[$i].id === id){
-          return this.state[$i]
+      for(var i= 0; i<this.state.length; i++){
+        if(this.state[i].id === id){
+          return this.state[i]
         }
       }
     }
