@@ -4,9 +4,11 @@ import Vue from 'vue'
 import 'vue-material/dist/vue-material.css'
 import App from './App'
 import router from './router'
+import Person from "./model/person.js"
 
 var VueMaterial = require('vue-material')
 Vue.use(VueMaterial)
+
 
 Vue.material.registerTheme({
     default: {

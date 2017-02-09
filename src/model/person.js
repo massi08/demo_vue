@@ -1,23 +1,23 @@
-class Person{
+export default class Persons {
 
-  constructor(id, firstName="", lastName="", profession=""){
-    this.state = {
-      id : id,
-      firstName: firstName,
-      lastName: lastName,
-      profession: profession
+    constructor() {
+        this.state = []
     }
-  }
 
-  setProfession(profession){
-    this.state.profession = profession
-  }
-
-  setFirsName(firstName){
-    this.state.firstName = firstName
-  }
-
-  setLastName(lastName){
-    this.state.lastName = lastName
-  }
+    addPerson(id, firstName = "", lastName = "", profession = "") {
+        let person = {
+            id: id,
+            firstName: firstName,
+            lastName: lastName,
+            profession: profession
+        }
+        this.state.push(person)
+    }
 }
+
+// let persons_store = new Persons()
+//
+// persons_store.addPerson(0, "Massinissa", "Bouneffa", "Web Developper")
+// persons_store.addPerson(1, "Fanuel", "Abebe", "Chomeur")
+// persons_store.addPerson(2, "Mahmoud", "Ayssami", "Back-End")
+

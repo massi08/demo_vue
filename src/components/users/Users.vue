@@ -3,9 +3,9 @@
     <my-header></my-header>
     <p>Liste des utilisateurs</p>
     <ul>
-      <li v-for="person in persons">
-        <router-link :to="{name:'Person', params: {id: person.state.id}}">
-          {{person.state.firstName}}
+      <li v-for="pers in persons">
+        <router-link :to="{name:'Person', params: {id: pers.state.id}}">
+          {{pers.state.firstName}}
         </router-link>
       </li>
     </ul>
@@ -33,33 +33,24 @@
 </template>
 
 <script>
-  //import Person from "../../model/Person.js"
-  import MyHeader from "../myHeader/MyHeader.vue"
-  import MyCart from "../myCart/MyCart.vue"
-    export default {
-      name: 'profile',
-      data : function () {
-        return{
-          persons: [
-            { state:{"id": 0, "firstName": "Massinissa", "lastName": "bouneffa", "profession": "chomeur lol" }
 
-            },
-            {
-              state:{"id": 1, "firstName": "Fanouel", "lastName": "Abebe", "profession": "chomeur lol" }
-            },
-            {
-              state:{"id": 2, "firstName": "Mahmoud", "lastName": "Ayssami", "profession": "chomeur lol" }
-            },
-          ],
-          person: {},
+    import MyHeader from "../myHeader/MyHeader.vue"
+    import Persons from "../../model/person.js"
+    export default {
+        name: 'profile',
+        data: function () {
+            return {
+                persons: Persons,
+                person: {},
+            }
+        },
+        components: {MyHeader},
+        methods: {
+            add: function (person) {
+                console.log(this.persons)
+                Persons.addPerson(Persons.length, person.firstName, person.lastName, person.profession)
+            }
         }
-      },
-      components: {MyHeader, MyCart},
-      methods:{
-          add: function (person) {
-            this.persons.push(new Person(this.persons.length, person.firstName, person.lastName, person.profession))
-          }
-      }
     }
 </script>
 
